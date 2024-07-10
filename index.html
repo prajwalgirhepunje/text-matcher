@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .app-heading{
+            text-align: center;
+            color: red;
+        }
+        .text-container{
+            display: flex;
+            justify-content: space-around;
+            color: yellow;
+        }
+        .input-text{
+            width: 300px;
+            height: 100px;
+        }
+        .match-result{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+       <u> <i><h1 class="app-heading">text matcher</h1></u></i>
+    <div class="text-container">
+        <input type="text" class="input-text" id="input1" onkeyup="comparetext()"/>
+        <input type="text" class="input-text" id="input2" onkeyup="comparetext()"/>
+    </div>
+   <P class="match-result" id="match-result-text"></P>
+    </div>
+    <script>
+    function comparetext(){
+        const input1Element = document.getElementById("input1")
+        const input2Element = document.getElementById("input2")
+        const resultElement = document.getElementById("match-result-text")
+        if(
+            input1Element.value == input2Element.value ){
+                resultElement.innerText = "matched !!"
+                resultElement.style.color = "green"
+            }
+            else{
+                  resultElement.innertext = "not matched!!"
+                  resultElement.style.color = "red"
+            }
+    }
+    
+    </script>
+</body>
+</html>
